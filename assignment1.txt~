@@ -1,0 +1,27 @@
+;;Steven Glasford
+;;Assignment 1
+;;CSC372 Brian Slator
+
+;;Problem 1
+(print "Problem 1")
+(print (mapcar (lambda (x) (* x 2)) '(2 4 6 8)))
+(print (mapcar (lambda (x) 
+	(if (numberp x) 
+		(* x 2)
+		nil))
+	 '(2 4 N 8)))
+
+;;Problem 2
+(print "Problem 2")
+(defun MAKE-SET (lst)
+	(cond ((null lst) nil)
+		((member (car lst) (cdr lst))
+			(MAKE-SET (cdr lst)))
+		(t (cons (car lst) (MAKE-SET (cdr lst))))))
+(print (MAKE-SET '(A B C A D C)))
+
+;;problem 3
+(print "Problem 3")
+
+
+
