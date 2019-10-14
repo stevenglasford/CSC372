@@ -22,6 +22,15 @@
 
 ;;problem 3
 (print "Problem 3")
+;;returns a TRUE is the lit is a set, false otherwise
+(defun IS-SET (lst)
+	(if (eq (list-length lst) (list-length (MAKE-SET lst)))
+		(print "TRUE")
+	        (print "FALSE"))
+)
 
-
+(print "(IS-SET '(a b c d))")
+(IS-SET '(a b c d))
+(print "(IS-SET '(a a b c d))")
+(IS-SET '(a a b c d))
 
