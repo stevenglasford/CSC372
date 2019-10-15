@@ -6,26 +6,26 @@
 (print "Problem 1")
 (print (mapcar (lambda (x) (* x 2)) '(2 4 6 8)))
 (print (mapcar (lambda (x) 
-	(if (numberp x) 
-		(* x 2)
-		nil))
-	 '(2 4 N 8)))
+        (if (numberp x) 
+                (* x 2)
+                nil))
+        '(2 4 N 8)))
 
 ;;Problem 2
 (print "Problem 2")
 (defun MAKE-SET (lst)
-	(cond ((null lst) nil)
-		((member (car lst) (cdr lst))
-			(MAKE-SET (cdr lst)))
-		(t (cons (car lst) (MAKE-SET (cdr lst))))))
+        (cond ((null lst) nil)
+                ((member (car lst) (cdr lst))
+                        (MAKE-SET (cdr lst)))
+                (t (cons (car lst) (MAKE-SET (cdr lst))))))
 (print (MAKE-SET '(A B C A D C)))
 
 ;;problem 3
 (print "Problem 3")
 ;;returns a TRUE is the lit is a set, false otherwise
 (defun IS-SET (lst)
-	(if (eq (list-length lst) (list-length (MAKE-SET lst)))
-		(print "TRUE")
+        (if (eq (list-length lst) (list-length (MAKE-SET lst)))
+                (print "TRUE")
 	        (print "FALSE"))
 )
 
@@ -68,7 +68,7 @@
 ;;mean (average) value
 (print "Problem 6")
 (defun my-average (lst)
-	(/ (my-sum lst) (my-len lst))
+        (/ (my-sum lst) (my-len lst))
 )
 
 (print  "(my-average '(1 2 3 4 5 6 7 8 9))")
