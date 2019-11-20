@@ -1,0 +1,594 @@
+I have made all of the rooms that were necessary, in particular, I created the room known rainbow land, made a backroom closet and made all of the proper linkages, as well as made descriptions and leave messages going from each room to the other.
+
+I made the proper description for myself:
+look at #14397
+steven.glasford
+a superhero but with the power to heal and even make their own armor
+It is awake and looks alert.
+
+I made a description for me room and its closet
+look
+Rainbowland
+A beautiful land of peace and prosperity
+Obvious exits are: anteroom and closet
+look
+Backroom
+Filled with unhappy people
+Obvious exits are: back
+
+I also left @leave messages between the rooms
+@leave anteroom is "You wander with delight back to the anteroom"
+You set the "leave" message of anteroom (#14457).
+@leave rainbow is "You enter the beautiful land of equality known as Rainbowland, full of people who love you, it is very bright and colorful."
+You set the "leave" message of rainbow (#14456).
+@dig closet,backroom "Backroom"
+closet,backroom "Backroom" (#14463) created.
+addmyexits
+@leave back is "You leave the closet, your family and friends accept you and love you"
+You set the "leave" message of back (#14466).
+@leave closet is "You enter the closet and feel depressed you can't reveal your true identity, nor can you love who you love, you are depressed and want to get out of the closet"
+You set the "leave" message of closet (#14465).
+
+Here is the raw transcript of the work I did
+
+*** Connected ***
+Fall 2019 Ante Room
+
+You see the Quantum Realm filled with subatomic particles
+joshua.j.reynolds is here.
+Obvious exits are: out, Johto, Tunnel, wooden_door, dublin, prairie, frequencies, Gate, invisible_boatmobile, Catapult, Portal, Airplane, and Kitchen_Door
+
+The Current Date in Blackwood: Sun Aug 2,  1885
+
+Last connected Wed Nov 20 15:31:52 2019 CST from 140-186-194-113-dynamic.midco.net
+There is new news.  Type `news' to read all news or `news new' to read just new news.
+go west
+You can't go that way (west).
+austin.rolandson has arrived.
+austin.rolandson leaves for the invisible_boatmobile.
+benjamin.koivula has arrived.
+benjamin.koivula leaves for the Kitchen_Door.
+benjamin.koivula has arrived.
+help @dig
+Syntax:  @dig "<new-room-name>"
+         @dig <exit-spec> to "<new-room-name>"
+         @dig <exit-spec> to <old-room-object-number>
+
+This is the basic building tool.  The first form of the command creates a new room with the given name.  The new room is not connected to anywhere else; it is floating in limbo.  The @dig command tells you its object number, though, so you can use the @move command to get there easily.
+
+The second form of the command not only creates the room, but one or two exits linking your current location to (and possibly from) the new room.  An <exit-spec> has one of the following two forms:
+        <names>
+        <names>|<names>
+where the first form is used when you only want to create one exit, from your current room to the new room, and the second form when you also want an exit back, from the new room to your current room.  In any case, the <names> piece is just a list of names for the exit, separated by commas; these are the names of the commands players can type to use the exit.  It is usually a good idea to include explicitly the standard abbreviations for direction names (e.g., 'n' for 'north', 'se' for 'southeast', etc.).  DO NOT put spaces in the names of exits; they are useless in MOO.
+
+The third form of the command is just like the second form except that no new room is created; you instead specify by object number the other room to/from which the new exits will connect.
+
+NOTE: You must own the room at one end or the other of the exits you create.  If you own both, everything is hunky-dorey.  If you own only one end, then after creating the exits you should write down their object numbers.  You must then get the owner of the other room to use @add-exit and @add-entrance to link your new exits to their room.
+
+Examples:
+    @dig "The Conservatory"
+creates a new room named "The Conservatory" and prints out its object number.
+    @dig north,n to "The North Pole"
+creates a new room and also an exit linking the player's current location to the new room; players would say either 'north' or 'n' to get from here to the new room.  No way to get back from that room is created.
+    @dig west,w|east,e,out to "The Department of Auto-Musicology"
+creates a new room and two exits, one taking players from here to the new room (via the commands 'west' or 'w') and one taking them from the new room to here (via 'east', 'e', or 'out').
+    @dig up,u to #7164
+creates an exit leading from the player's current room to #7164, which must be an existing room.
+austin.rolandson has arrived.
+benjamin.koivula leaves for the Kitchen_Door.
+austin.rolandson leaves for the Portal.
+austin.rolandson has arrived.
+addmyexits
+Looking at steven.glasford (#14397)
+Not an exit: steven.glasford (#14397)
+Looking at psychonaut (#14444)
+Not an exit: psychonaut (#14444)
+Looking at psycho (#14448)
+Not an exit: psycho (#14448)
+nathan.seefeldt has arrived.
+nathan.seefeldt leaves for the Airplane.
+@add-exit
+Usage:  @add-exit <exit-number>
+nathan.seefeldt has arrived.
+addmyexits
+Looking at steven.glasford (#14397)
+Not an exit: steven.glasford (#14397)
+Looking at psychonaut (#14444)
+Not an exit: psychonaut (#14444)
+Looking at psycho (#14448)
+Not an exit: psycho (#14448)
+look at psychonaut
+I see no "psychonaut" here.
+addmyexits pyschonaut
+I don't understand that.
+Try this instead:  addmyexits
+help addmyexit
+Sorry, but no help is available on `addmyexit'.
+help addmyexits
+Sorry, but no help is available on `addmyexits'.
+help @addmyexits
+Sorry, but no help is available on `@addmyexits'.
+help @dig
+Syntax:  @dig "<new-room-name>"
+         @dig <exit-spec> to "<new-room-name>"
+         @dig <exit-spec> to <old-room-object-number>
+
+This is the basic building tool.  The first form of the command creates a new room with the given name.  The new room is not connected to anywhere else; it is floating in limbo.  The @dig command tells you its object number, though, so you can use the @move command to get there easily.
+
+The second form of the command not only creates the room, but one or two exits linking your current location to (and possibly from) the new room.  An <exit-spec> has one of the following two forms:
+        <names>
+        <names>|<names>
+where the first form is used when you only want to create one exit, from your current room to the new room, and the second form when you also want an exit back, from the new room to your current room.  In any case, the <names> piece is just a list of names for the exit, separated by commas; these are the names of the commands players can type to use the exit.  It is usually a good idea to include explicitly the standard abbreviations for direction names (e.g., 'n' for 'north', 'se' for 'southeast', etc.).  DO NOT put spaces in the names of exits; they are useless in MOO.
+
+The third form of the command is just like the second form except that no new room is created; you instead specify by object number the other room to/from which the new exits will connect.
+
+NOTE: You must own the room at one end or the other of the exits you create.  If you own both, everything is hunky-dorey.  If you own only one end, then after creating the exits you should write down their object numbers.  You must then get the owner of the other room to use @add-exit and @add-entrance to link your new exits to their room.
+
+Examples:
+    @dig "The Conservatory"
+creates a new room named "The Conservatory" and prints out its object number.
+    @dig north,n to "The North Pole"
+creates a new room and also an exit linking the player's current location to the new room; players would say either 'north' or 'n' to get from here to the new room.  No way to get back from that room is created.
+    @dig west,w|east,e,out to "The Department of Auto-Musicology"
+creates a new room and two exits, one taking players from here to the new room (via the commands 'west' or 'w') and one taking them from the new room to here (via 'east', 'e', or 'out').
+    @dig up,u to #7164
+creates an exit leading from the player's current room to #7164, which must be an existing room.
+@dig rainbow to "Rainbowland"
+Rainbowland (#14455) created.
+Exit to Rainbowland (#14455) via {"rainbow"} created with id #14456.  However, I couldn't add #14456 as a legal exit from Fall 2019 Ante Room.  Get its owner, MooAdmin to add it for you.
+look
+Fall 2019 Ante Room
+You see the Quantum Realm filled with subatomic particles
+joshua.j.reynolds is here.
+Obvious exits are: out, Johto, Tunnel, wooden_door, dublin, prairie, frequencies, Gate, invisible_boatmobile, Catapult, Portal, Airplane, and Kitchen_Door
+addmyexits
+Looking at steven.glasford (#14397)
+Not an exit: steven.glasford (#14397)
+Looking at psychonaut (#14444)
+Not an exit: psychonaut (#14444)
+Looking at psycho (#14448)
+Not an exit: psycho (#14448)
+Looking at Rainbowland (#14455)
+Not an exit: Rainbowland (#14455)
+Looking at rainbow (#14456)
+  .source=Fall 2019 Ante Room (#13562) and .dest=Rainbowland (#14455) calling add-exit
+You have added an exit from Fall 2019 Ante Room (#13562) to Rainbowland (#14455)
+  source=Fall 2019 Ante Room (#13562) and .dest=Rainbowland (#14455) calling add-entrance
+You have added an entrance from Rainbowland (#14455) to Fall 2019 Ante Room (#13562)
+look
+Fall 2019 Ante Room
+You see the Quantum Realm filled with subatomic particles
+joshua.j.reynolds is here.
+Obvious exits are: out, Johto, Tunnel, wooden_door, dublin, prairie, frequencies, Gate, invisible_boatmobile, Catapult, Portal, Airplane, Kitchen_Door, and rainbow
+connor.liudahl has arrived.
+go rainbow
+Rainbowland
+You see nothing special.
+Obvious exits are: nothing
+@sethome
+Rainbowland is your new home.
+look
+Rainbowland
+You see nothing special.
+Obvious exits are: nothing
+@dig anteroom to #13562
+Exit from Rainbowland (#14455) to Fall 2019 Ante Room (#13562) via {"anteroom"} created with id #14457.
+However, I couldn't add #14457 as a legal entrance to Fall 2019 Ante Room.  You may have to get its owner, MooAdmin to add it for you.
+go #13562
+You can't go that way (#13562).
+@move to #13562
+Fall 2019 Ante Room
+You see the Quantum Realm filled with subatomic particles
+joshua.j.reynolds and connor.liudahl are here.
+Obvious exits are: out, Johto, Tunnel, wooden_door, dublin, prairie, frequencies, Gate, invisible_boatmobile, Catapult, Portal, Airplane, Kitchen_Door, and rainbow
+go Kitchen_Door
+You are drawn toward the kitchen door by the smell of turkey and make your way inside.
+Kitchen
+You see nothing special.
+benjamin.koivula is here.
+Obvious exits are: Out
+go out
+You walk out of the kitchen and away from the nice meal.
+Fall 2019 Ante Room
+You see the Quantum Realm filled with subatomic particles
+joshua.j.reynolds, connor.liudahl, and MooAdmin are here.
+Obvious exits are: out, Johto, Tunnel, wooden_door, dublin, prairie, frequencies, Gate, invisible_boatmobile, Catapult, Portal, Airplane, Kitchen_Door, and rainbow
+go rainbow
+Rainbowland
+You see nothing special.
+Obvious exits are: anteroom
+addmyexits
+Looking at steven.glasford (#14397)
+Not an exit: steven.glasford (#14397)
+Looking at psychonaut (#14444)
+Not an exit: psychonaut (#14444)
+Looking at psycho (#14448)
+Not an exit: psycho (#14448)
+Looking at Rainbowland (#14455)
+Not an exit: Rainbowland (#14455)
+Looking at rainbow (#14456)
+  .source=Fall 2019 Ante Room (#13562) and .dest=Rainbowland (#14455) calling add-exit
+You have added an exit from Fall 2019 Ante Room (#13562) to Rainbowland (#14455)
+  source=Fall 2019 Ante Room (#13562) and .dest=Rainbowland (#14455) calling add-entrance
+You have added an entrance from Rainbowland (#14455) to Fall 2019 Ante Room (#13562)
+Looking at anteroom (#14457)
+  .source=Rainbowland (#14455) and .dest=Fall 2019 Ante Room (#13562) calling add-exit
+You have added an exit from Rainbowland (#14455) to Fall 2019 Ante Room (#13562)
+  source=Rainbowland (#14455) and .dest=Fall 2019 Ante Room (#13562) calling add-entrance
+You have added an entrance from Fall 2019 Ante Room (#13562) to Rainbowland (#14455)
+look
+Rainbowland
+You see nothing special.
+Obvious exits are: anteroom
+@describe anteroom as The exit out of the room, to get back to the room containing all of the rooms for the 2019 fall class of comparative programming languages with brian slator
+Description set.
+go anterom
+You can't go that way (anterom).
+go anteroom
+Fall 2019 Ante Room
+You see the Quantum Realm filled with subatomic particles
+joshua.j.reynolds and MooAdmin are here.
+Obvious exits are: out, Johto, Tunnel, wooden_door, dublin, prairie, frequencies, Gate, invisible_boatmobile, Catapult, Portal, Airplane, Kitchen_Door, and rainbow
+@describe rainbow as A beautiful land of equality and peace, and prosperity.
+Description set.
+go rainbow
+Rainbowland
+You see nothing special.
+Obvious exits are: anteroom
+@leave anteroom "You wander with delight back to the anteroom"
+I don't understand that.
+help messages
+Most objects have messages that are printed when a player succeeds or fails in manipulating the object in some way.  Of course, the kinds of messages printed are specific to the kinds of manipulations and those, in turn, are specific to the kind of object.  Regardless of the kind of object, though, there is a uniform means for listing the kinds of messages that can be set and then for setting them.
+
+The '@messages' command prints out all of the messages you can set on any object you own.  Type 'help @messages' for details.
+
+To set a particular message on one of your objects use a command with this form:
+        @<message-name> <object> is "<message>"
+where '<message-name>' is the name of the message being set, <object> is the name or number of the object on which you want to set that message, and <message> is the actual text.
+
+For example, consider the 'leave' message on an exit; it is printed to a player when they successfully use the exit to leave a room.  To set the 'leave' message on the exit 'north' from the current room, use the command
+        @leave north is "You wander in a northerly way out of the room."
+
+[Note to programmers: This class of commands automatically applies to any property whose name ends in '_msg'.  Thus, in the example above, the command is setting the 'leave_msg' property of the named exit.  You can get such a command to work on new kinds of objects simply by giving the appropriate properties names that end in '_msg'.  Additionally, in many cases the _msg property is accompanied by a _msg verb, which defaultly returns the named property, but which is available to be customized in more complex ways than allowed by simple string substitution.  You should check for the particular property you're considering whether the verb form exists (typically with @list).]
+
+The following help topics describe the uses of the various messages available on standard kinds of objects:
+
+container-messages -- the messages on objects that can contain other objects
+exit-messages -- the messages on exit objects
+thing-messages -- the messages on objects that can be taken and dropped
+@leave anteroom is "You wander with delight back to the anteroom"
+You set the "leave" message of anteroom (#14457).
+go anteroom
+You wander with delight back to the anteroom
+Fall 2019 Ante Room
+You see the Quantum Realm filled with subatomic particles
+joshua.j.reynolds, MooAdmin, and seth.a.wolf are here.
+Obvious exits are: out, Johto, Tunnel, wooden_door, dublin, prairie, frequencies, Gate, invisible_boatmobile, Catapult, Portal, Airplane, Kitchen_Door, rainbow, big_door, big_door, big_door, and big_door
+go rainbow
+Rainbowland
+You see nothing special.
+Obvious exits are: anteroom
+go anteroom
+You wander with delight back to the anteroom
+Fall 2019 Ante Room
+You see the Quantum Realm filled with subatomic particles
+joshua.j.reynolds, MooAdmin, and seth.a.wolf are here.
+Obvious exits are: out, Johto, Tunnel, wooden_door, dublin, prairie, frequencies, Gate, invisible_boatmobile, Catapult, Portal, Airplane, Kitchen_Door, rainbow, big_door, big_door, big_door, and big_door
+joshua.j.reynolds leaves for the Tunnel.
+joshua.j.reynolds has arrived.
+@leave rainbow is "You enter the beautiful land of equality known as Rainbowland, full of people who love you, it is very bright and colorful."
+You set the "leave" message of rainbow (#14456).
+brian.slatornov19 has arrived.
+go rainbow
+You enter the beautiful land of equality known as Rainbowland, full of people who love you, it is very bright and colorful.
+Rainbowland
+You see nothing special.
+Obvious exits are: anteroom
+@dig closet,backroom "Backroom"
+closet,backroom "Backroom" (#14463) created.
+addmyexits
+Looking at steven.glasford (#14397)
+Not an exit: steven.glasford (#14397)
+Looking at psychonaut (#14444)
+Not an exit: psychonaut (#14444)
+Looking at psycho (#14448)
+Not an exit: psycho (#14448)
+Looking at Rainbowland (#14455)
+Not an exit: Rainbowland (#14455)
+Looking at rainbow (#14456)
+  .source=Fall 2019 Ante Room (#13562) and .dest=Rainbowland (#14455) calling add-exit
+You have added an exit from Fall 2019 Ante Room (#13562) to Rainbowland (#14455)
+  source=Fall 2019 Ante Room (#13562) and .dest=Rainbowland (#14455) calling add-entrance
+You have added an entrance from Rainbowland (#14455) to Fall 2019 Ante Room (#13562)
+Looking at anteroom (#14457)
+  .source=Rainbowland (#14455) and .dest=Fall 2019 Ante Room (#13562) calling add-exit
+You have added an exit from Rainbowland (#14455) to Fall 2019 Ante Room (#13562)
+  source=Rainbowland (#14455) and .dest=Fall 2019 Ante Room (#13562) calling add-entrance
+You have added an entrance from Fall 2019 Ante Room (#13562) to Rainbowland (#14455)
+Looking at closet,backroom "Backroom" (#14463)
+Not an exit: closet,backroom "Backroom" (#14463)
+go backroom
+You can't go that way (backroom).
+look
+Rainbowland
+You see nothing special.
+Obvious exits are: anteroom
+addmyexits
+Looking at steven.glasford (#14397)
+Not an exit: steven.glasford (#14397)
+Looking at psychonaut (#14444)
+Not an exit: psychonaut (#14444)
+Looking at psycho (#14448)
+Not an exit: psycho (#14448)
+Looking at Rainbowland (#14455)
+Not an exit: Rainbowland (#14455)
+Looking at rainbow (#14456)
+  .source=Fall 2019 Ante Room (#13562) and .dest=Rainbowland (#14455) calling add-exit
+You have added an exit from Fall 2019 Ante Room (#13562) to Rainbowland (#14455)
+  source=Fall 2019 Ante Room (#13562) and .dest=Rainbowland (#14455) calling add-entrance
+You have added an entrance from Rainbowland (#14455) to Fall 2019 Ante Room (#13562)
+Looking at anteroom (#14457)
+  .source=Rainbowland (#14455) and .dest=Fall 2019 Ante Room (#13562) calling add-exit
+You have added an exit from Rainbowland (#14455) to Fall 2019 Ante Room (#13562)
+  source=Rainbowland (#14455) and .dest=Fall 2019 Ante Room (#13562) calling add-entrance
+You have added an entrance from Fall 2019 Ante Room (#13562) to Rainbowland (#14455)
+Looking at closet,backroom "Backroom" (#14463)
+Not an exit: closet,backroom "Backroom" (#14463)
+@dig closet,backroom to "Backroom"
+Backroom (#14464) created.
+Exit from Rainbowland (#14455) to Backroom (#14464) via {"closet", "backroom"} created with id #14465.
+addmyexits
+Looking at steven.glasford (#14397)
+Not an exit: steven.glasford (#14397)
+Looking at psychonaut (#14444)
+Not an exit: psychonaut (#14444)
+Looking at psycho (#14448)
+Not an exit: psycho (#14448)
+Looking at Rainbowland (#14455)
+Not an exit: Rainbowland (#14455)
+Looking at rainbow (#14456)
+  .source=Fall 2019 Ante Room (#13562) and .dest=Rainbowland (#14455) calling add-exit
+You have added an exit from Fall 2019 Ante Room (#13562) to Rainbowland (#14455)
+  source=Fall 2019 Ante Room (#13562) and .dest=Rainbowland (#14455) calling add-entrance
+You have added an entrance from Rainbowland (#14455) to Fall 2019 Ante Room (#13562)
+Looking at anteroom (#14457)
+  .source=Rainbowland (#14455) and .dest=Fall 2019 Ante Room (#13562) calling add-exit
+You have added an exit from Rainbowland (#14455) to Fall 2019 Ante Room (#13562)
+  source=Rainbowland (#14455) and .dest=Fall 2019 Ante Room (#13562) calling add-entrance
+You have added an entrance from Fall 2019 Ante Room (#13562) to Rainbowland (#14455)
+Looking at closet,backroom "Backroom" (#14463)
+Not an exit: closet,backroom "Backroom" (#14463)
+Looking at Backroom (#14464)
+Not an exit: Backroom (#14464)
+Looking at closet (#14465)
+  .source=Rainbowland (#14455) and .dest=Backroom (#14464) calling add-exit
+You have added an exit from Rainbowland (#14455) to Backroom (#14464)
+  source=Rainbowland (#14455) and .dest=Backroom (#14464) calling add-entrance
+You have added an entrance from Backroom (#14464) to Rainbowland (#14455)
+go backroom
+Backroom
+You see nothing special.
+Obvious exits are: nothing
+@dig back to #14455
+Exit from Backroom (#14464) to Rainbowland (#14455) via {"back"} created with id #14466.
+addmyexits
+Looking at steven.glasford (#14397)
+Not an exit: steven.glasford (#14397)
+Looking at psychonaut (#14444)
+Not an exit: psychonaut (#14444)
+Looking at psycho (#14448)
+Not an exit: psycho (#14448)
+Looking at Rainbowland (#14455)
+Not an exit: Rainbowland (#14455)
+Looking at rainbow (#14456)
+  .source=Fall 2019 Ante Room (#13562) and .dest=Rainbowland (#14455) calling add-exit
+You have added an exit from Fall 2019 Ante Room (#13562) to Rainbowland (#14455)
+  source=Fall 2019 Ante Room (#13562) and .dest=Rainbowland (#14455) calling add-entrance
+You have added an entrance from Rainbowland (#14455) to Fall 2019 Ante Room (#13562)
+Looking at anteroom (#14457)
+  .source=Rainbowland (#14455) and .dest=Fall 2019 Ante Room (#13562) calling add-exit
+You have added an exit from Rainbowland (#14455) to Fall 2019 Ante Room (#13562)
+  source=Rainbowland (#14455) and .dest=Fall 2019 Ante Room (#13562) calling add-entrance
+You have added an entrance from Fall 2019 Ante Room (#13562) to Rainbowland (#14455)
+Looking at closet,backroom "Backroom" (#14463)
+Not an exit: closet,backroom "Backroom" (#14463)
+Looking at Backroom (#14464)
+Not an exit: Backroom (#14464)
+Looking at closet (#14465)
+  .source=Rainbowland (#14455) and .dest=Backroom (#14464) calling add-exit
+You have added an exit from Rainbowland (#14455) to Backroom (#14464)
+  source=Rainbowland (#14455) and .dest=Backroom (#14464) calling add-entrance
+You have added an entrance from Backroom (#14464) to Rainbowland (#14455)
+Looking at back (#14466)
+  .source=Backroom (#14464) and .dest=Rainbowland (#14455) calling add-exit
+You have added an exit from Backroom (#14464) to Rainbowland (#14455)
+  source=Backroom (#14464) and .dest=Rainbowland (#14455) calling add-entrance
+You have added an entrance from Rainbowland (#14455) to Backroom (#14464)
+look
+Backroom
+You see nothing special.
+Obvious exits are: back
+@describe back as the door out of the scary dark closet
+Description set.
+@leave back is "You leave the closet, your family and friends accept you and love you"
+You set the "leave" message of back (#14466).
+go back
+You leave the closet, your family and friends accept you and love you
+Rainbowland
+You see nothing special.
+Obvious exits are: anteroom and closet
+@describe closet as "A place where people go and don't feel good, it's better to be out of the closet with the ones you love"
+Description set.
+go closet
+Backroom
+You see nothing special.
+Obvious exits are: back
+@describe You enter the closet and feel depressed you can't reveal your true identity, nor can you love who you love, you are depressed and want to get out of the closet"
+I don't understand that.
+Try this instead:  @describe You enter the closet and feel depressed you can't reveal your true identity, nor can you love who you love, you are depressed and want as get out of the closet
+@describe Backroom as You enter the closet and feel depressed you can't reveal your true identity, nor can you love who you love, you are depressed and want to get out of the closet"
+I see no "Backroom" here.
+@describe closet as You enter the closet and feel depressed you can't reveal your true identity, nor can you love who you love, you are depressed and want to get out of the closet"
+I see no "closet" here.
+go back
+You leave the closet, your family and friends accept you and love you
+Rainbowland
+You see nothing special.
+Obvious exits are: anteroom and closet
+@leave closet is "You enter the closet and feel depressed you can't reveal your true identity, nor can you love who you love, you are depressed and want to get out of the closet"
+You set the "leave" message of closet (#14465).
+go closet
+You enter the closet and feel depressed you can't reveal your true identity, nor can you love who you love, you are depressed and want to get out of the closet
+Backroom
+You see nothing special.
+Obvious exits are: back
+go back
+You leave the closet, your family and friends accept you and love you
+Rainbowland
+You see nothing special.
+Obvious exits are: anteroom and closet
+help @dig
+Syntax:  @dig "<new-room-name>"
+         @dig <exit-spec> to "<new-room-name>"
+         @dig <exit-spec> to <old-room-object-number>
+
+This is the basic building tool.  The first form of the command creates a new room with the given name.  The new room is not connected to anywhere else; it is floating in limbo.  The @dig command tells you its object number, though, so you can use the @move command to get there easily.
+
+The second form of the command not only creates the room, but one or two exits linking your current location to (and possibly from) the new room.  An <exit-spec> has one of the following two forms:
+        <names>
+        <names>|<names>
+where the first form is used when you only want to create one exit, from your current room to the new room, and the second form when you also want an exit back, from the new room to your current room.  In any case, the <names> piece is just a list of names for the exit, separated by commas; these are the names of the commands players can type to use the exit.  It is usually a good idea to include explicitly the standard abbreviations for direction names (e.g., 'n' for 'north', 'se' for 'southeast', etc.).  DO NOT put spaces in the names of exits; they are useless in MOO.
+
+The third form of the command is just like the second form except that no new room is created; you instead specify by object number the other room to/from which the new exits will connect.
+
+NOTE: You must own the room at one end or the other of the exits you create.  If you own both, everything is hunky-dorey.  If you own only one end, then after creating the exits you should write down their object numbers.  You must then get the owner of the other room to use @add-exit and @add-entrance to link your new exits to their room.
+
+Examples:
+    @dig "The Conservatory"
+creates a new room named "The Conservatory" and prints out its object number.
+    @dig north,n to "The North Pole"
+creates a new room and also an exit linking the player's current location to the new room; players would say either 'north' or 'n' to get from here to the new room.  No way to get back from that room is created.
+    @dig west,w|east,e,out to "The Department of Auto-Musicology"
+creates a new room and two exits, one taking players from here to the new room (via the commands 'west' or 'w') and one taking them from the new room to here (via 'east', 'e', or 'out').
+    @dig up,u to #7164
+creates an exit leading from the player's current room to #7164, which must be an existing room.
+look at me
+steven.glasford
+a superhero but with the power to heal and even make their own armor
+It is awake and looks alert.
+look at luke.tollefson
+I see no "luke.tollefson" here.
+@audit me
+Objects owned by steven.glasford (from #0 to #14472):
+#14397 steven.glasford                [Rainbowland]
+#14444 psychonaut                    
+#14448 psycho                        
+#14455 Rainbowland                   
+#14456 rainbow                        *Fall 2019 Ante Roo->Rainbowland
+#14457 anteroom                       Rainbowland->*Fall 2019 Ante Roo
+#14463 closet,backroom "Backroom"    
+#14464 Backroom                      
+#14465 closet                         Rainbowland->Backroom
+#14466 back                           Backroom->Rainbowland
+-- 10 objects.----------------------------------------------------------------
+look at #14397
+steven.glasford
+a superhero but with the power to heal and even make their own armor
+It is awake and looks alert.
+look at 
+You must give the name of some object.
+look at #14455
+Rainbowland
+You see nothing special.
+Obvious exits are: anteroom and closet
+@describe #14455 as A beautiful land of peace and prosperity
+Description set.
+@describe #14463 as A closet filled with unhappy people.
+Description set.
+look at #14463
+closet,backroom "Backroom"
+A closet filled with unhappy people.
+Obvious exits are: nothing
+look at #14455
+Rainbowland
+A beautiful land of peace and prosperity
+Obvious exits are: anteroom and closet
+move me to Rainbowland
+#102:move (this == #14455), line 10:  Range error
+(End of traceback)
+@move me to #14455
+steven.glasford is already at Rainbowland.
+look
+Rainbowland
+A beautiful land of peace and prosperity
+Obvious exits are: anteroom and closet
+go closret
+You can't go that way (closret).
+go closet
+You enter the closet and feel depressed you can't reveal your true identity, nor can you love who you love, you are depressed and want to get out of the closet
+Backroom
+You see nothing special.
+Obvious exits are: back
+look
+Backroom
+You see nothing special.
+Obvious exits are: back
+@describe #14464 as Filled with unhappy people
+Description set.
+look at #14464
+Backroom
+Filled with unhappy people
+Obvious exits are: back
+look at closet
+I see no "closet" here.
+look at Backroom
+I see no "Backroom" here.
+audit
+I don't understand that.
+@audit
+Objects owned by steven.glasford (from #0 to #14474):
+#14397 steven.glasford                [Backroom]
+#14444 psychonaut                    
+#14448 psycho                        
+#14455 Rainbowland                   
+#14456 rainbow                        *Fall 2019 Ante Roo->Rainbowland
+#14457 anteroom                       Rainbowland->*Fall 2019 Ante Roo
+#14463 closet,backroom "Backroom"    
+#14464 Backroom                      
+#14465 closet                         Rainbowland->Backroom
+#14466 back                           Backroom->Rainbowland
+-- 10 objects.----------------------------------------------------------------
+look
+Backroom
+Filled with unhappy people
+Obvious exits are: back
+go back
+You leave the closet, your family and friends accept you and love you
+Rainbowland
+A beautiful land of peace and prosperity
+Obvious exits are: anteroom and closet
+go anteroom
+You wander with delight back to the anteroom
+Fall 2019 Ante Room
+You see the Quantum Realm filled with subatomic particles
+MooAdmin, P.fraser, and connor.liudahl are here.
+Obvious exits are: out, Johto, Tunnel, wooden_door, dublin, prairie, frequencies, Gate, invisible_boatmobile, Catapult, Portal, Airplane, Kitchen_Door, rainbow, big_door, luke, and Door
+go rainbow
+You enter the beautiful land of equality known as Rainbowland, full of people who love you, it is very bright and colorful.
+Rainbowland
+A beautiful land of peace and prosperity
+Obvious exits are: anteroom and closet
+look at #14396
+luke.tollefson
+the bazinga man
+It is awake and looks alert.
+@audit #14396
+Objects owned by luke.tollefson (from #0 to #14480):
+#14396 luke.tollefson                 [wardrobe]
+#14471 luke.tollesfon                
+#14472 luke                           *Fall 2019 Ante Roo->luke.tollesfon
+#14473 back                           luke.tollesfon->*Fall 2019 Ante Roo
+#14475 wardrobe                      
+#14476 wardrobe                       luke.tollesfon->wardrobe
+#14477 exit                           wardrobe->luke.tollesfon
+-- 7 objects.-----------------------------------------------------------------
