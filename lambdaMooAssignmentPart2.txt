@@ -1,0 +1,181 @@
+I made the counter called counter14455
+@show #14544
+Object ID:  #14544
+Name:       counter14455
+Parent:     Generic Traffic Counter (#3731)
+Location:   steven.glasford (#14397)
+Owner:      steven.glasford (#14397)
+Flags:      r
+Verb definitions:
+    enterfunc
+    report
+    traffic
+Property definitions:
+    vistorlist
+    visitorslist
+Properties:
+    key: 0
+    aliases: {"counter14455"}
+    description: ""
+    object_size: {0, 0}
+    x: 0
+    y: 0
+    z: 0
+    gui: 0
+    detail_url: "defaultImage"
+    detail_prefix: "detail"
+    detail_index: 0
+    image_index: 0
+    image_url: "defaultImage"
+    image_prefix: "images"
+    sound_prefix: "sounds"
+    sound_url: "defaultSound"
+    sound_index: 0
+    scale_percent: 0
+    enter_directive: "#E"
+    mouth_x: 0
+    mouth_y: 0
+    object_prefix: "#OBJECT"
+    position: {0, 0, 0}
+    pict: ""
+    orig_owner: 0
+    drop_failed_msg: "You can't seem to drop %t here."
+    drop_succeeded_msg: "You drop %t."
+    odrop_failed_msg: "tries to drop %t but fails!"
+    odrop_succeeded_msg: "drops %t."
+    otake_succeeded_msg: "picks up %t."
+    otake_failed_msg: ""
+    take_succeeded_msg: "You take %t."
+    take_failed_msg: "You can't pick that up."
+    vistorlist: 0
+    visitorslist: {{#14397, 1, 1574644378}}
+
+
+You can find the dollarg name by looking at the scripts, also I have properly described the counter
+look at "counter14455"
+a robot that keeps the list of people that enter the room
+
+within counter I have three scripts 
+@show #14544:enterfunc
+#14544:enterfunc
+Owner:            steven.glasford (#14397)
+Permissions:      rxd
+Direct Object:    this
+Preposition:      none
+Indirect Object:  this
+
+the script in the counter14455
+"";
+" enterfunc: influences in the elections of a counter";
+"";
+pass(@args);
+visitor = args[1];
+$g.counter14455:traffic(visitor);
+
+
+@show #14544:report
+#14544:report
+Owner:            steven.glasford (#14397)
+Permissions:      rd
+Direct Object:    this
+Preposition:      none
+Indirect Object:  none
+The script for report 
+
+"";
+" report : produce a report";
+"";
+counter = this;
+for line in (counter.visitorslist)
+  player:tell($string_utils:nn(line[1]), line[2], $time_utils:mmddyy(line[3]));
+endfor
+
+@show #14544:traffic
+#14544:traffic
+Owner:            steven.glasford (#14397)
+Permissions:      rxd
+Direct Object:    this
+Preposition:      none
+Indirect Object:  this
+
+"";
+" traffic: track people enter and leaving the visitorlist";
+"";
+counter = this;
+newthing = args[1];
+player:tell("Welcome");
+firstcol = $list_utils:slice(counter.visitorslist);
+newindex = newthing in firstcol;
+if (newindex > 0)
+  player:tell("Hi there ", newthing.name, " we are please to meet again. ");
+  counter.visitorslist[newindex][2] = counter.visitorslist[newindex][2] + 1;
+else
+  player:tell("Bonjour ", newthing.name, " fancy meeting you. ");
+  counter.visitorslist = {@counter.visitorslist, {newthing, 1, time()}};
+endif
+
+For the property vistorslist I have this
+@show #14544.visitorslist
+#14544.visitorslist
+Owner:        steven.glasford (#14397)
+Permissions:  rc
+Value:        {{#14397, 1, 1574644378}, {#14564, 2, 1574645386}}
+
+Also in my room that I created I have another enterfunc value
+@show #14455:enterfunc
+#14455:enterfunc
+Owner:            steven.glasford (#14397)
+Permissions:      rxd
+Direct Object:    this
+Preposition:      none
+Indirect Object:  this
+
+"";
+" enterfunc: influence the traffic controller ";
+"";
+pass(@args);
+visitor = args[1];
+$g.counter14455:traffic(visitor);
+
+
+The report function works
+report counter14455
+steven.glasford (#14397)111/24/19
+dylan.reid.smith (#14564)211/24/19
+
+Also the report function works here is the script
+@show #14544:report
+#14544:report
+Owner:            steven.glasford (#14397)
+Permissions:      rd
+Direct Object:    this
+Preposition:      none
+Indirect Object:  none
+
+"";
+" report : produce a report";
+"";
+counter = this;
+for line in (counter.visitorslist)
+  player:tell($string_utils:nn(line[1]), line[2], " ", $time_utils:mmddyy(line[3]), " ", $time_utils:ampm(line[3]));
+endfor
+
+the report function now works and includes the when function and the lastest person to enter the room, this function works by showing the last person to enter last
+report counter14455
+steven.glasford (#14397)1 11/24/19 7:12 p.m.
+dylan.reid.smith (#14564)2 11/24/19 7:29 p.m.
+
+@audit me
+Objects owned by steven.glasford (from #0 to #14616):
+#14397 steven.glasford                [Rainbowland]
+#14444 psychonaut                    
+#14448 psycho                        
+#14455 Rainbowland                   
+#14456 rainbow                        *Fall 2019 Ante Roo->Rainbowland
+#14457 anteroom                       Rainbowland->*Fall 2019 Ante Roo
+#14463 closet,backroom "Backroom"    
+#14464 Backroom                      
+#14465 closet                         Rainbowland->Backroom
+#14466 back                           Backroom->Rainbowland
+#14544 counter14455                   [steven.glasford]
+-- 11 objects.----------------------------------------------------------------
